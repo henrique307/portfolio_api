@@ -16,7 +16,7 @@ export class GatosService {
     async findAll(query: Record<string, string>) {
         return await this.gatoModel
             .find(query, { __v: 0, _id: 0 })
-            .collation({ locale: 'pt', strength: 2 })
+            .collation({ locale: 'pt', strength: 4 })
             .exec()
     }
 }
