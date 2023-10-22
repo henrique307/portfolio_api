@@ -5,7 +5,8 @@ declare global {
             USER_NAME: string,
             USER_PASS: string,
             SECRET: string,
-            PORTFOLIO_BOT: string
+            PORTFOLIO_BOT: string,
+            PORT: string | number
         }
     }
 }
