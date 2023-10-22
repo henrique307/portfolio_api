@@ -1,9 +1,9 @@
 import { Post, Body } from '@nestjs/common'
 import { Controller } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { TelegramService } from 'src/utils/TelegramService/Telegram.service';
+import { TelegramService } from '../utils/TelegramService/telegram.service';
 import { LoginBody } from './interface/loginBody.interface';
-import { ApiResponse, ApiOperation, ApiTags, ApiProperty } from '@nestjs/swagger';
+import { ApiResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { Authenticated, BadResquest } from './interface/apiResponse.interfaces';
 
 @ApiTags("Autenticação")

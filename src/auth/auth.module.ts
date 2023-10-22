@@ -4,7 +4,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { configDotenv } from 'dotenv';
 import { PassportModule } from '@nestjs/passport';
 import { AuthController } from './auth.controller';
-import { TelegramService } from 'src/utils/TelegramService/Telegram.service';
+import { TelegramService } from '../utils/TelegramService/telegram.service';
 import { JwtStrategy } from './jwt.strategy';
 
 configDotenv();
