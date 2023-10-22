@@ -14,10 +14,6 @@ import { JwtAuthGuard } from 'src/auth/auth.guard';
   ],
   providers: [
     GatosService,
-    {
-      provide: APP_GUARD,
-      useClass: JwtAuthGuard
-    }
   ],
   controllers: [GatosController]
 })

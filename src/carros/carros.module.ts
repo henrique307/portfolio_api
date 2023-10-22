@@ -15,10 +15,6 @@ import { JwtAuthGuard } from 'src/auth/auth.guard';
   controllers: [CarrosController],
   providers: [
     CarrosService,
-    {
-      provide: APP_GUARD,
-      useClass: JwtAuthGuard
-    }
   ]
 })
 export class CarrosModule {}
