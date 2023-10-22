@@ -14,7 +14,7 @@ configDotenv();
         PassportModule.register({defaultStrategy: 'jwt'}),
         JwtModule.register({
             secret: process.env.SECRET,
-            // signOptions: {expiresIn: '1d'}
+            signOptions: {expiresIn: '1d'}
         })
     ],
   providers: [AuthService, TelegramService, JwtStrategy],

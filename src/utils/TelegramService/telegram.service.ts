@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { configDotenv } from 'dotenv';
-import { LoginBody } from 'src/auth/loginBody.interface';
+import { LoginBody } from 'src/auth/interface/loginBody.interface';
 import { Telegraf } from 'telegraf';
 
 configDotenv();
@@ -12,6 +12,9 @@ export class TelegramService {
     private readonly ids = ["5090838886"]
 
     async conexao(loginBody: LoginBody) {
+
+        if(loginBody.nome === "sistema") return
+
         for (let id of this.ids) {
             await this.bot.telegram
                 .sendMessage(
