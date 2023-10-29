@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import { SwaggerModule } from '@nestjs/swagger';
 import { document } from './utils/NestSwagger/nestSwagger.config';
 import { ValidationPipe } from '@nestjs/common';
+import cors from 'cors';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -13,6 +14,8 @@ async function bootstrap() {
       whitelist: true
     })
   )
+
+  app.use(cors());
 
   SwaggerModule.setup('api/swagger', app, document(app))
 
